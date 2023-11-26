@@ -80,7 +80,7 @@ and advance_while lexer pred =
       then advance_while_aux (acc ^ String.make 1 ch) (advance lexer)
       else lexer, acc
   in
-  advance_while_aux Caml.String.empty lexer
+  advance_while_aux Stdlib.String.empty lexer
 
 and is_ident ch = 
   Char.(is_alpha ch || ch = '_')
